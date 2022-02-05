@@ -1,0 +1,30 @@
+.header{
+    margin: 0;
+    padding: 0;
+    background: rgb(195, 0, 255);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    position: relative;
+}
+.logoCard{
+    color: white;
+    font-size:23px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin:0 auto;
+}
+.search{
+    width: 200px;
+    height: 35px;
+    align-items: center;
+    display: flex;
+    margin:0 auto;
+    margin-top: 23px;
+    border: none;
+    cursor:pointer;
+}

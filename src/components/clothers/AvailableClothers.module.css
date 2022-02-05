@@ -1,0 +1,60 @@
+.clotherList{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    border: none;
+}
+.clother{
+    width: 200px;
+    height: 250px;
+    margin-right: 100px;
+    box-shadow: 15px 15px 15px 15px rgba(161, 81, 81, 0.3);
+    border-top:4px solid rgb(75, 84, 196);
+    border-left:4px solid rgb(75, 84, 196);
+    margin-bottom:65px ;
+}
+.clother h3{
+    text-align:center;
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(88, 62, 66);
+}
+.clother p{
+    text-align:center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(88, 62, 66);
+}
+.clother b {
+    color:rgb(33, 179, 33) ;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    display: flex;
+    justify-content: right;
+    margin-right: 35px;
+}
+.clother img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+}
+.input{
+    top: 0;
+    width: 300px;
+    border: none;
+    height: 30px;
+    display: flex;
+    background: rgb(243, 238, 238);
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.input::placeholder{
+    color: rgb(8, 7, 7);
+    font-size: 15px;
+}
+.search{
+    display: flex;
+}
