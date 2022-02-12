@@ -3,7 +3,7 @@
     padding: 0;
     background: rgb(195, 0, 255);
     width: 100%;
-    height: 5rem;
+    height: 7rem;
     display: flex;
     justify-content: space-between;
     z-index: 10;
@@ -18,13 +18,8 @@
     display: flex;
     margin:0 auto;
 }
-.search{
-    width: 200px;
-    height: 35px;
-    align-items: center;
-    display: flex;
-    margin:0 auto;
-    margin-top: 23px;
-    border: none;
-    cursor:pointer;
+.logoCard img{
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
 }

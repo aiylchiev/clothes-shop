@@ -8,7 +8,7 @@
 }
 .clother{
     width: 200px;
-    height: 250px;
+    height: 290px;
     margin-right: 100px;
     box-shadow: 15px 15px 15px 15px rgba(161, 81, 81, 0.3);
     border-top:4px solid rgb(75, 84, 196);
@@ -26,6 +26,7 @@
     color: rgb(88, 62, 66);
 }
 .clother b {
+    margin-bottom: 10px;
     color:rgb(33, 179, 33) ;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -55,6 +56,12 @@
     color: rgb(8, 7, 7);
     font-size: 15px;
 }
-.search{
+.SearshShoes{
     display: flex;
+    justify-content: center;
+}
+.searsh{
+    background: rgb(243, 238, 238);
+    width: 25px;
+    height: 30px;
 }

@@ -1,11 +1,14 @@
 import React from 'react';
 import classes from './AvailableT-shirt.module.css'
 import { useState, useEffect } from 'react'
+import Loader from '../UI/Loader';
+import ToCartButton from '../UI/ToCartButton';
 
 
 const AvailableTshirt = (props) => {
     const [tshirt, setTshirt] = useState([]);
     const [value, setValue] = React.useState('');
+    const [isLoading, setIsLoading] = useState(true);
     const filteredTshirt = tshirt.filter(tshirt => {
         return tshirt.name.toLowerCase().includes(value.toLowerCase())
     })
@@ -30,15 +33,19 @@ const AvailableTshirt = (props) => {
                 })
             }
             setTshirt(loadedTshirt)
+            setIsLoading(false)
         }
         fetchTshirt()
     }, [])
-
+    if(isLoading){
+        return  <Loader/>
+    }
     const shirtList = filteredTshirt.map(shirt => <li key={shirt.id} className={classes.tshirt}>
         <h3>{shirt.name}</h3>
         <img src={shirt.image}/>
         <p>{shirt.description}</p>
-        <b>{shirt.price}kgs</b>
+        <b>{shirt.price.toFixed(2)}kgs</b>
+        <ToCartButton/>
     </li>)
     return <>
         <form onSubmit={handleSubmit} className={classes.SearshShoes}>
@@ -48,7 +55,6 @@ const AvailableTshirt = (props) => {
                 placeholder='Что вы ищете?'
                 onChange={handleChange}
             />
-            <img src={''}/> 
         </form>
         <ul className={classes.shirtList}>
         {shirtList}

@@ -7,5 +7,4 @@ const Product = () => {
             <p>Товары</p>
     </li>;
 };
-
 export default Product;

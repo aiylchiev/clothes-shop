@@ -4,4 +4,4 @@ import style from './Navigation.module.css'
 const ProductIcon = () => {
     return <img className={style.ProductIcon} src={product}/>
 };
-export default ProductIcon;
+export default ProductIcon

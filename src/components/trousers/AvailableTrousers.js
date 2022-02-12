@@ -1,9 +1,12 @@
 import React from 'react';
 import classes from './AvailableTrousers.module.css'
 import { useState,useEffect } from  'react'
+import Loader from '../UI/Loader';
+import ToCartButton from '../UI/ToCartButton';
 const AvailableTrousers = () => {
     const [trousers, setTrousers] = useState([]);
     const [value, setValue] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
     const handleChange = (event) => {
         setValue(event.target.value)
     }
@@ -28,15 +31,19 @@ const AvailableTrousers = () => {
             })
         }
         setTrousers(loadedTrousers)
+        setIsLoading(false)
         }
         fetTrousers()
     }, [])
-
+    if(isLoading){
+        return <Loader/>
+    }
     const trousersList = filteredTrousers.map(trouser => <li key={trouser.id} className={classes.trousers}>
         <h3>{trouser.name}</h3>
         <img src={trouser.image}/>
         <p>{trouser.description}</p>
-        <b>{trouser.price}kgs</b>
+        <b>{trouser.price.toFixed(2)}kgs</b>
+        <ToCartButton/>
     </li>)
     return <>
         <form onSubmit={handleSubmit} className={classes.trouserss}>
@@ -46,7 +53,6 @@ const AvailableTrousers = () => {
                 onChange={handleChange}
                 placeholder='Что вы ищете?'
             />
-            <img/>
         </form>
         <ul className={classes.trousersist}>
             {trousersList}

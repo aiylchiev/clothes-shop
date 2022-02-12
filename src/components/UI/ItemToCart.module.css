@@ -1,0 +1,19 @@
+.item-to-cart{
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: none;
+    background:aqua;
+    border-radius: 25px 0;
+}
+.item-to-cart:active{
+    background: rgb(76, 134, 151);
+}
+.colorToCart{
+    font-size: 16px;
+    color: white;
+}

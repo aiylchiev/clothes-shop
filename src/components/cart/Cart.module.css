@@ -1,0 +1,56 @@
+.cart-items{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 20rem;
+    overflow: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+}
+.action{
+    display: flex;
+    justify-content: flex-end;
+}
+.total{
+    display: flex;
+    justify-content: space-around;
+    color: rgb(0, 0, 0);
+    line-height: 30px;
+    font-size: 18px;
+    font-family: monospace;
+}
+.button-alt{
+    border: none;
+    background:rgb(240, 122, 13);
+    width: 5rem;
+    height: 2rem;
+    border-radius:12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+}
+.button-alt:active{
+    background-color:rgb(218, 188, 20);
+    color: black;
+    cursor: pointer;
+}
+.button{
+    margin-left: 1rem;
+    border: none;
+    background:rgb(157, 13, 240);
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    border-radius:12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
+    font-size: 17px;
+    text-align: center;
+}
+.button:active{
+    background-color:rgb(218, 188, 20);
+    color: black;
+    cursor: pointer;
+}

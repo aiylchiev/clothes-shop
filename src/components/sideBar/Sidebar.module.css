@@ -1,7 +1,7 @@
 .sidebar-block{
     width: 250px;
     background:rgb(120, 100, 212);
-    height:600px;
+    height:270px;
     padding:0;
     margin: 0;
 }
@@ -14,17 +14,21 @@
     padding: 0;
 }
 .sidebar-block ul li{
-    background: rgb(104, 98, 49);
+    background: rgb(49, 100, 104);
     list-style-type:none;
     font-size: 20px;
     color: honeydew;
-    border: 1px solid white;
+    border: none;
     margin-bottom: 25px;
     height: 30px;
     display: flex;
     width:100%;
     align-items: center;
     cursor: pointer;
+}
+.sidebar-block ul li:active,
+.sidebar-block ul li:hover{
+    background:rgb(0, 204, 255);
 }
 .odejda{
     width: 20px;

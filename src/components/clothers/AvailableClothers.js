@@ -1,9 +1,12 @@
 import React from 'react';
 import { useState } from 'react'
 import classes from './AvailableClothers.module.css'
-const AvailableClothers = () => {
+import Loader from '../UI/Loader';
+import ToCartButton from '../UI/ToCartButton';
+const AvailableClothers = (props) => {
     const [clothers, setClother] = useState([]);
     const [value, setvalue] = useState('');
+    const [isLloading, setIsloading] = useState(true);
     const handleChange = (event) => {
         setvalue(event.target.value)
     }
@@ -28,30 +31,40 @@ const AvailableClothers = () => {
                 })
             }
             setClother(loadedClothers)
+            setIsloading(false)
         }
         fetchClothers()
     }, [])
+    if(isLloading){
+        return <Loader/>
+    }
     const clotherList = filteredClothers.map(clother => 
         <li key={clother.id} className={classes.clother}>
             <h3>{clother.name}</h3>
-            <img src={clother.image}/>
+            <img src={clother.image} alt="clother"/>
             <p>{clother.description}</p>
-            <b> {clother.price}kgs</b>
+            <b> {clother.price.toFixed(2)}kgs</b>
+            <ToCartButton 
+                // key={clothers.id}
+                // id={clothers.id}
+                // name={clothers.name}
+                // description={clothers.description}
+                // price={clothers.price}
+            />
         </li>)
     return(
         <>
-        <form onSubmit={handleSubmit} className={classes.search}>
-            <input
-            className={classes.input}
-            type="search"
-            placeholder="Что вы ищете?"
-            onChange={handleChange}
-        />
-        <img src={''}/>
-        </form>
-            <ul className={classes.clotherList}>
-                {clotherList}
-            </ul>
+            <form onSubmit={handleSubmit} className={classes.search}>
+                <input
+                className={classes.input}
+                type="search"
+                placeholder="Что вы ищете?"
+                onChange={handleChange}
+            />
+            </form>
+                <ul className={classes.clotherList}>
+                    {clotherList}
+                </ul>
         </>
     )
 };

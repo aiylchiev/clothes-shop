@@ -1,5 +1,8 @@
 .nav{
-    width: 700px;
+    /* width: 700px; */
+    display: flex;
+    align-items: center;
+    
 }
 .nav ul{
     top: 15px;
@@ -8,9 +11,9 @@
     align-items: center;
 }
 .nav ul li{
-    margin-top: 25px;
     border: none;
     margin-left: 5px;
+    margin-right: 20px;
     color: white;
     font-size: 18px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -35,6 +38,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.AuthLi a{
+    text-decoration: none;
+    color: white;
 }
 .ProductIcon{
     width: 20px;

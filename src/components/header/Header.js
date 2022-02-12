@@ -7,5 +7,5 @@ const Header = () => {
         <HeaderLogo/>
         <Navigation/>
     </header>;
-};
+}
 export default Header;

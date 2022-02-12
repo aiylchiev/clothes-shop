@@ -1,15 +1,19 @@
 import React from 'react'
-import { Route } from 'react-router-dom';
 import './App.css';
 import Main from './components/main/Main';
 import Layout from './containers/layout/Layout';
+import { useSelector } from 'react-redux'
+import Cart from './components/cart/Cart';
+
 function App() {
+  const isShow = useSelector(state => state.ui.cartIsVisible)
   return (
-    <div className="App">
-    <Layout>
-          <Main/>
-        </Layout>
-    </div>
+      <>
+        {isShow && <Cart/>}
+        <Layout>
+              <Main/>
+            </Layout>
+      </>
   );
 }
 export default App;

@@ -1,0 +1,33 @@
+.cartBlock{
+    cursor:pointer;
+    width: 130px;
+    height: 40px;
+    background:rgb(23, 201, 233);
+    display: flex;
+    align-items: center;
+    border:none;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.cartBlock:active{
+    background: rgb(7, 181, 250);
+}
+.cartBlock img{
+    width: 30px;
+    display: flex;
+    margin: 0 auto;
+}
+.cartBlock b{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:15px;
+}
+.cartBlock p{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:17px;
+    background: red;
+    border-radius: 15px;
+    width: 20px;
+}
